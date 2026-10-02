@@ -1,0 +1,3559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <meta
+        name="description"
+        content="YEMILAZ PROPERTIES - Property Management and Rental Services"
+    >
+
+    <title>YEMILAZ PROPERTIES | Property Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PUBLIC WEBSITE
+         ===================================================== -->
+
+    <div id="publicApp">
+
+
+        <!-- HEADER -->
+
+        <header class="site-header">
+
+            <div class="header-inner">
+
+
+                <a
+                    href="#home"
+                    class="brand"
+                    onclick="showPublicSection('home')"
+                >
+
+                    <div class="brand-icon">
+                        🏠
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            YEMILAZ PROPERTIES
+                        </strong>
+
+                        <span>
+                            Property Management
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <nav class="public-nav">
+
+
+                    <a
+                        href="#home"
+                        onclick="showPublicSection('home')"
+                    >
+                        Home
+                    </a>
+
+
+                    <a
+                        href="#properties"
+                        onclick="showPublicSection('properties')"
+                    >
+                        Properties
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        onclick="showPublicSection('about')"
+                    >
+                        About
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="nav-login-btn"
+                        onclick="openLoginModal()"
+                    >
+                        Login
+                    </button>
+
+
+                </nav>
+
+
+            </div>
+
+        </header>
+
+
+        <!-- PUBLIC MAIN -->
+
+        <main>
+
+
+            <!-- =================================================
+                 HOME
+                 ================================================= -->
+
+            <section
+                id="home"
+                class="public-section active"
+            >
+
+
+                <div class="hero">
+
+
+                    <div class="hero-content">
+
+
+                        <span class="hero-badge">
+                            🏠 Quality Rental Properties
+                        </span>
+
+
+                        <h1>
+
+                            Find a place
+
+                            <span>
+                                you can call home.
+                            </span>
+
+                        </h1>
+
+
+                        <p>
+
+                            Discover available houses, apartments,
+                            shops and other properties available for rent.
+
+                        </p>
+
+
+                        <div class="hero-actions">
+
+
+                            <button
+                                type="button"
+                                class="primary-btn"
+                                onclick="showPublicSection('properties')"
+                            >
+                                View Available Properties
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="secondary-btn"
+                                onclick="openLoginModal()"
+                            >
+                                Tenant Login
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- FEATURED PROPERTIES -->
+
+                <div class="page-container">
+
+
+                    <div class="section-heading">
+
+
+                        <div>
+
+                            <span class="section-label">
+                                AVAILABLE NOW
+                            </span>
+
+
+                            <h2>
+                                Properties Available for Rent
+                            </h2>
+
+
+                            <p>
+                                Browse our currently available properties.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="text-btn"
+                            onclick="showPublicSection('properties')"
+                        >
+                            View All →
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="homePropertyList"
+                        class="property-grid"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🏠
+                            </div>
+
+
+                            <h3>
+                                Properties coming soon
+                            </h3>
+
+
+                            <p>
+                                Available properties will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 PROPERTIES
+                 ================================================= -->
+
+            <section
+                id="properties"
+                class="public-section"
+            >
+
+
+                <div class="page-container public-page">
+
+
+                    <div class="page-title">
+
+
+                        <span class="section-label">
+                            RENTAL PROPERTIES
+                        </span>
+
+
+                        <h1>
+                            Available Properties
+                        </h1>
+
+
+                        <p>
+
+                            Find a house, apartment, shop or other
+                            property available for rent.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="property-filter-bar">
+
+
+                        <input
+                            type="search"
+                            id="propertySearch"
+                            placeholder="🔍 Search properties..."
+                            autocomplete="off"
+                        >
+
+
+                        <select id="propertyTypeFilter">
+
+
+                            <option value="">
+                                All property types
+                            </option>
+
+
+                            <option value="house">
+                                House
+                            </option>
+
+
+                            <option value="apartment">
+                                Apartment
+                            </option>
+
+
+                            <option value="shop">
+                                Shop
+                            </option>
+
+
+                            <option value="office">
+                                Office
+                            </option>
+
+
+                            <option value="land">
+                                Land
+                            </option>
+
+
+                            <option value="other">
+                                Other
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+                    <div
+                        id="propertyList"
+                        class="property-grid"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🏠
+                            </div>
+
+
+                            <h3>
+                                No properties available yet
+                            </h3>
+
+
+                            <p>
+                                New available properties will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 ABOUT
+                 ================================================= -->
+
+            <section
+                id="about"
+                class="public-section"
+            >
+
+
+                <div class="page-container">
+
+
+                    <div class="about-card">
+
+
+                        <div class="about-icon">
+                            🏠
+                        </div>
+
+
+                        <span class="section-label">
+                            ABOUT US
+                        </span>
+
+
+                        <h1>
+                            YEMILAZ PROPERTIES
+                        </h1>
+
+
+                        <p>
+
+                            We manage residential and commercial
+                            rental properties while providing tenants
+                            with a simple way to access their rental
+                            information, payments, complaints and
+                            important announcements.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- =================================================
+             PUBLIC FOOTER
+             ================================================= -->
+
+        <footer class="site-footer">
+
+
+            <div class="footer-inner">
+
+
+                <div>
+
+                    <strong>
+                        YEMILAZ PROPERTIES
+                    </strong>
+
+                    <p>
+                        Property Management
+                    </p>
+
+                </div>
+
+
+                <p>
+
+                    © <span id="currentYear"></span>
+                    YEMILAZ PROPERTIES.
+                    All rights reserved.
+
+                </p>
+
+
+            </div>
+
+
+        </footer>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGIN MODAL
+         ===================================================== -->
+
+    <div
+        id="loginModal"
+        class="modal hidden"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="modal-overlay"
+            onclick="closeLoginModal()"
+        ></div>
+
+
+        <div
+            class="modal-card login-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="loginTitle"
+        >
+
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closeLoginModal()"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <div class="login-header">
+
+
+                <div class="login-icon">
+                    🔐
+                </div>
+
+
+                <h2 id="loginTitle">
+                    Welcome Back
+                </h2>
+
+
+                <p>
+                    Login to your account
+                </p>
+
+
+            </div>
+
+
+            <form
+                id="loginForm"
+                autocomplete="on"
+            >
+
+
+                <div class="form-group">
+
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                </div>
+
+
+                <div class="form-group">
+
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+
+                    <div class="password-input">
+
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password"
+                        >
+                            👁
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="loginError"
+                    class="form-message error-message hidden"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    id="loginSubmitBtn"
+                    class="primary-btn full-width"
+                >
+                    Login
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         ADMIN APPLICATION
+         ===================================================== -->
+
+    <div
+        id="adminApp"
+        class="private-app hidden"
+    >
+
+
+        <!-- ADMIN SIDEBAR -->
+
+        <aside
+            id="adminSidebar"
+            class="sidebar"
+        >
+
+
+            <div class="sidebar-brand">
+
+
+                <div class="brand-icon">
+                    🏠
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        YEMILAZ PROPERTIES
+                    </strong>
+
+                    <span>
+                        Landlord Panel
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+
+                <button
+                    type="button"
+                    class="sidebar-link active"
+                    data-section="adminDashboard"
+                    onclick="showAdminSection('adminDashboard', this)"
+                >
+
+                    <span>
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminProperties"
+                    onclick="showAdminSection('adminProperties', this)"
+                >
+
+                    <span>
+                        🏠
+                    </span>
+
+                    Properties
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminTenants"
+                    onclick="showAdminSection('adminTenants', this)"
+                >
+
+                    <span>
+                        👥
+                    </span>
+
+                    Tenants
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminPayments"
+                    onclick="showAdminSection('adminPayments', this)"
+                >
+
+                    <span>
+                        💰
+                    </span>
+
+                    Payments
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminComplaints"
+                    onclick="showAdminSection('adminComplaints', this)"
+                >
+
+                    <span>
+                        📝
+                    </span>
+
+                    Complaints
+
+
+                    <span
+                        id="adminComplaintBadge"
+                        class="nav-badge hidden"
+                    >
+                        0
+                    </span>
+
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminMessages"
+                    onclick="showAdminSection('adminMessages', this)"
+                >
+
+                    <span>
+                        📢
+                    </span>
+
+                    Messages
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    data-section="adminNotifications"
+                    onclick="showAdminSection('adminNotifications', this)"
+                >
+
+                    <span>
+                        🔔
+                    </span>
+
+                    Notifications
+
+                </button>
+
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="logoutUser()"
+                >
+
+                    <span>
+                        🚪
+                    </span>
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ADMIN MAIN -->
+
+        <div class="private-main">
+
+
+            <header class="private-header">
+
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    onclick="toggleSidebar()"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+
+                    <h2 id="adminPageTitle">
+                        Dashboard
+                    </h2>
+
+
+                    <p id="adminPageSubtitle">
+                        Overview of your property business
+                    </p>
+
+
+                </div>
+
+
+                <div class="header-user">
+
+
+                    <div class="user-avatar">
+                        👤
+                    </div>
+
+
+                    <div class="header-user-info">
+
+
+                        <strong id="adminUserName">
+                            Landlord
+                        </strong>
+
+
+                        <span>
+                            Administrator
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <main class="private-content">
+
+
+                <!-- ADMIN DASHBOARD -->
+
+                <section
+                    id="adminDashboard"
+                    class="private-section active"
+                >
+
+
+                    <div class="welcome-banner">
+
+
+                        <div>
+
+
+                            <span>
+                                LANDLORD DASHBOARD
+                            </span>
+
+
+                            <h1>
+                                Welcome back 👋
+                            </h1>
+
+
+                            <p>
+
+                                Manage your properties and tenants
+                                from one place.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="stats-grid">
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                🏠
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Total Properties
+                                </span>
+
+
+                                <strong id="statProperties">
+                                    0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                👥
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Tenants
+                                </span>
+
+
+                                <strong id="statTenants">
+                                    0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                💰
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Payments
+                                </span>
+
+
+                                <strong id="statPayments">
+                                    ₦0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                ⚠️
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Expiring Soon
+                                </span>
+
+
+                                <strong id="statExpiring">
+                                    0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="dashboard-columns">
+
+
+                        <div class="dashboard-card">
+
+
+                            <div class="card-heading">
+
+
+                                <div>
+
+                                    <h3>
+                                        Recent Complaints
+                                    </h3>
+
+
+                                    <p>
+                                        Tenant maintenance requests
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="text-btn"
+                                    onclick="showAdminSection('adminComplaints')"
+                                >
+                                    View All
+                                </button>
+
+
+                            </div>
+
+
+                            <div id="dashboardComplaints">
+
+
+                                <div class="empty-small">
+                                    No complaints yet.
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="dashboard-card">
+
+
+                            <div class="card-heading">
+
+
+                                <div>
+
+                                    <h3>
+                                        Rent Expiring Soon
+                                    </h3>
+
+
+                                    <p>
+                                        Tenancies requiring attention
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="text-btn"
+                                    onclick="showAdminSection('adminTenants')"
+                                >
+                                    View All
+                                </button>
+
+
+                            </div>
+
+
+                            <div id="dashboardExpiring">
+
+
+                                <div class="empty-small">
+                                    No upcoming expirations.
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN PROPERTIES
+                     ================================================= -->
+
+                <section
+                    id="adminProperties"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Properties
+                            </h2>
+
+
+                            <p>
+                                Manage houses, apartments, shops and other properties.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            onclick="openPropertyForm()"
+                        >
+                            + Add Property
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="propertyFormContainer"
+                        class="dashboard-card form-card hidden"
+                    >
+
+
+                        <div class="card-heading">
+
+
+                            <div>
+
+                                <h3 id="propertyFormTitle">
+                                    Add Property
+                                </h3>
+
+
+                                <p>
+                                    Enter the property information.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="modal-close small"
+                                onclick="closePropertyForm()"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+
+                        <form id="propertyForm">
+
+
+                            <input
+                                type="hidden"
+                                id="propertyId"
+                            >
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyName">
+                                        Property Name
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="propertyName"
+                                        placeholder="e.g. 2 Bedroom Flat"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyType">
+                                        Property Type
+                                    </label>
+
+
+                                    <select
+                                        id="propertyType"
+                                        required
+                                    >
+
+
+                                        <option value="">
+                                            Select type
+                                        </option>
+
+
+                                        <option value="house">
+                                            House
+                                        </option>
+
+
+                                        <option value="apartment">
+                                            Apartment
+                                        </option>
+
+
+                                        <option value="shop">
+                                            Shop
+                                        </option>
+
+
+                                        <option value="office">
+                                            Office
+                                        </option>
+
+
+                                        <option value="land">
+                                            Land
+                                        </option>
+
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="propertyAddress">
+                                        Address
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="propertyAddress"
+                                        placeholder="Property address"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyCity">
+                                        City
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="propertyCity"
+                                        placeholder="City"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyState">
+                                        State
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="propertyState"
+                                        placeholder="State"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyRent">
+                                        Rent Amount
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="propertyRent"
+                                        min="0"
+                                        step="0.01"
+                                        placeholder="₦0"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertySecurity">
+                                        Security Fee
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="propertySecurity"
+                                        min="0"
+                                        step="0.01"
+                                        placeholder="₦0"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyService">
+                                        Service Charge
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="propertyService"
+                                        min="0"
+                                        step="0.01"
+                                        placeholder="₦0"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyBedrooms">
+                                        Bedrooms
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="propertyBedrooms"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="propertyBathrooms">
+                                        Bathrooms
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="propertyBathrooms"
+                                        min="0"
+                                        placeholder="0"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="propertyDescription">
+                                        Description
+                                    </label>
+
+
+                                    <textarea
+                                        id="propertyDescription"
+                                        rows="4"
+                                        placeholder="Describe the property..."
+                                    ></textarea>
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+                                    <label for="propertyImages">
+                                        Property Pictures
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        id="propertyImages"
+                                        name="propertyImages"
+                                        accept="image/*"
+                                        multiple
+                                    >
+
+                                    <small class="input-help">
+                                        Select one or more pictures of the property.
+                                    </small>
+
+                                    <div
+                                        id="propertyImageSelection"
+                                        class="input-help"
+                                        style="margin-top:8px;"
+                                    >
+                                        No pictures selected.
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-check full">
+
+
+                                    <input
+                                        type="checkbox"
+                                        id="propertyAdvertised"
+                                    >
+
+
+                                    <label for="propertyAdvertised">
+                                        Advertise this property on the public homepage
+                                    </label>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn"
+                                    onclick="closePropertyForm()"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="primary-btn"
+                                    id="propertySaveBtn"
+                                >
+                                    Save Property
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminPropertyList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🏠
+                            </div>
+
+
+                            <h3>
+                                No properties yet
+                            </h3>
+
+
+                            <p>
+                                Click "Add Property" to create your first property.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN TENANTS
+                     ================================================= -->
+
+                <section
+                    id="adminTenants"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Tenants
+                            </h2>
+
+
+                            <p>
+                                Manage your tenants and their rental information.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            onclick="openTenantForm()"
+                        >
+                            + Add Tenant
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="tenantFormContainer"
+                        class="dashboard-card form-card hidden"
+                    >
+
+
+                        <div class="card-heading">
+
+
+                            <div>
+
+                                <h3>
+                                    Add Tenant
+                                </h3>
+
+
+                                <p>
+                                    Create a tenant account and rental record.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="modal-close small"
+                                onclick="closeTenantForm()"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+
+                        <form id="tenantForm">
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantFullName">
+                                        Full Name
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="tenantFullName"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantEmail">
+                                        Email
+                                    </label>
+
+
+                                    <input
+                                        type="email"
+                                        id="tenantEmail"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantPhone">
+                                        Phone Number
+                                    </label>
+
+
+                                    <input
+                                        type="tel"
+                                        id="tenantPhone"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantAddress">
+                                        Personal Address
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="tenantAddress"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+                                    <label for="tenantPropertySelect">
+                                        Property
+                                    </label>
+
+                                    <select id="tenantPropertySelect">
+                                        <option value="">
+                                            Select property
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantRentStart">
+                                        Rent Start Date
+                                    </label>
+
+
+                                    <input
+                                        type="date"
+                                        id="tenantRentStart"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="tenantRentEnd">
+                                        Rent End Date
+                                    </label>
+
+
+                                    <input
+                                        type="date"
+                                        id="tenantRentEnd"
+                                    >
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn"
+                                    onclick="closeTenantForm()"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="primary-btn"
+                                >
+                                    Create Tenant
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminTenantList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                👥
+                            </div>
+
+
+                            <h3>
+                                No tenants yet
+                            </h3>
+
+
+                            <p>
+                                Tenants will appear here after you add them.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN PAYMENTS
+                     ================================================= -->
+
+                <section
+                    id="adminPayments"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Payments
+                            </h2>
+
+
+                            <p>
+                                Record and manage rent and other payments.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            onclick="openPaymentForm()"
+                        >
+                            + Record Payment
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="paymentFormContainer"
+                        class="dashboard-card form-card hidden"
+                    >
+
+
+                        <div class="card-heading">
+
+
+                            <div>
+
+                                <h3>
+                                    Record Payment
+                                </h3>
+
+
+                                <p>
+                                    Record rent, security, electricity,
+                                    water or other fees.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="modal-close small"
+                                onclick="closePaymentForm()"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+
+                        <form id="paymentForm">
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentTenant">
+                                        Tenant
+                                    </label>
+
+
+                                    <select
+                                        id="paymentTenant"
+                                        required
+                                    >
+
+
+                                        <option value="">
+                                            Select tenant
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentType">
+                                        Payment Type
+                                    </label>
+
+
+                                    <select
+                                        id="paymentType"
+                                        required
+                                    >
+
+
+                                        <option value="">
+                                            Select type
+                                        </option>
+
+
+                                        <option value="rent">
+                                            Rent
+                                        </option>
+
+
+                                        <option value="security">
+                                            Security
+                                        </option>
+
+
+                                        <option value="electricity">
+                                            Electricity
+                                        </option>
+
+
+                                        <option value="water">
+                                            Water
+                                        </option>
+
+
+                                        <option value="service_charge">
+                                            Service Charge
+                                        </option>
+
+
+                                        <option value="maintenance">
+                                            Maintenance
+                                        </option>
+
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentAmount">
+                                        Amount
+                                    </label>
+
+
+                                    <input
+                                        type="number"
+                                        id="paymentAmount"
+                                        min="0"
+                                        step="0.01"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentDate">
+                                        Payment Date
+                                    </label>
+
+
+                                    <input
+                                        type="date"
+                                        id="paymentDate"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentMethod">
+                                        Payment Method
+                                    </label>
+
+
+                                    <select id="paymentMethod">
+
+
+                                        <option value="">
+                                            Select method
+                                        </option>
+
+
+                                        <option value="cash">
+                                            Cash
+                                        </option>
+
+
+                                        <option value="bank_transfer">
+                                            Bank Transfer
+                                        </option>
+
+
+                                        <option value="card">
+                                            Card
+                                        </option>
+
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="paymentReference">
+                                        Reference
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="paymentReference"
+                                        placeholder="Optional"
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="paymentNote">
+                                        Note
+                                    </label>
+
+
+                                    <textarea
+                                        id="paymentNote"
+                                        rows="3"
+                                        placeholder="Optional note..."
+                                    ></textarea>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn"
+                                    onclick="closePaymentForm()"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="primary-btn"
+                                >
+                                    Save Payment
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminPaymentList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                💰
+                            </div>
+
+
+                            <h3>
+                                No payments recorded
+                            </h3>
+
+
+                            <p>
+                                Recorded payments will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN COMPLAINTS
+                     ================================================= -->
+
+                <section
+                    id="adminComplaints"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Complaints
+                            </h2>
+
+
+                            <p>
+                                View and respond to tenant complaints.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminComplaintList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                📝
+                            </div>
+
+
+                            <h3>
+                                No complaints
+                            </h3>
+
+
+                            <p>
+                                Tenant complaints will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN MESSAGES
+                     ================================================= -->
+
+                <section
+                    id="adminMessages"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Messages
+                            </h2>
+
+
+                            <p>
+                                Send important announcements to tenants.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            onclick="openMessageForm()"
+                        >
+                            + New Message
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="messageFormContainer"
+                        class="dashboard-card form-card hidden"
+                    >
+
+
+                        <div class="card-heading">
+
+
+                            <div>
+
+                                <h3>
+                                    New Message
+                                </h3>
+
+
+                                <p>
+                                    Send a message to a tenant or all tenants.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="modal-close small"
+                                onclick="closeMessageForm()"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+
+                        <form id="messageForm">
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="messageRecipient">
+                                        Recipient
+                                    </label>
+
+
+                                    <select id="messageRecipient">
+
+
+                                        <option value="">
+                                            Select tenant
+                                        </option>
+
+
+                                        <option value="ALL">
+                                            All Tenants
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="messageTitle">
+                                        Title
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="messageTitle"
+                                        placeholder="Message title"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="messageBody">
+                                        Message
+                                    </label>
+
+
+                                    <textarea
+                                        id="messageBody"
+                                        rows="6"
+                                        placeholder="Write your message..."
+                                        required
+                                    ></textarea>
+
+
+                                </div>
+
+
+                                <div class="form-check full">
+
+
+                                    <input
+                                        type="checkbox"
+                                        id="sendEmailNotification"
+                                        checked
+                                    >
+
+
+                                    <label for="sendEmailNotification">
+                                        Send email notification
+                                    </label>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn"
+                                    onclick="closeMessageForm()"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="primary-btn"
+                                >
+                                    Send Message
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminMessageList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                📢
+                            </div>
+
+
+                            <h3>
+                                No messages yet
+                            </h3>
+
+
+                            <p>
+                                Messages you send will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     ADMIN NOTIFICATIONS
+                     ================================================= -->
+
+                <section
+                    id="adminNotifications"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Notifications
+                            </h2>
+
+
+                            <p>
+                                Rent reminders and system notifications.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        id="adminNotificationList"
+                        class="admin-list"
+                    >
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🔔
+                            </div>
+
+
+                            <h3>
+                                No notifications
+                            </h3>
+
+
+                            <p>
+                                Important alerts will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TENANT APPLICATION
+         ===================================================== -->
+
+    <div
+        id="tenantApp"
+        class="private-app hidden"
+    >
+
+
+        <aside class="sidebar tenant-sidebar">
+
+
+            <div class="sidebar-brand">
+
+
+                <div class="brand-icon">
+                    🏠
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        YEMILAZ PROPERTIES
+                    </strong>
+
+                    <span>
+                        Tenant Portal
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+
+                <button
+                    type="button"
+                    class="sidebar-link active"
+                    onclick="showTenantSection('tenantDashboard', this)"
+                >
+
+                    <span>
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="showTenantSection('tenantProperty', this)"
+                >
+
+                    <span>
+                        🏠
+                    </span>
+
+                    My Property
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="showTenantSection('tenantPayments', this)"
+                >
+
+                    <span>
+                        💰
+                    </span>
+
+                    My Payments
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="showTenantSection('tenantComplaints', this)"
+                >
+
+                    <span>
+                        📝
+                    </span>
+
+                    Complaints
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="showTenantSection('tenantMessages', this)"
+                >
+
+                    <span>
+                        📢
+                    </span>
+
+                    Messages
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="showTenantSection('tenantNotifications', this)"
+                >
+
+                    <span>
+                        🔔
+                    </span>
+
+                    Notifications
+
+                </button>
+
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+
+                <button
+                    type="button"
+                    class="sidebar-link"
+                    onclick="logoutUser()"
+                >
+
+                    <span>
+                        🚪
+                    </span>
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+        <div class="private-main">
+
+
+            <header class="private-header">
+
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    onclick="toggleTenantSidebar()"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+
+                    <h2 id="tenantPageTitle">
+                        Tenant Dashboard
+                    </h2>
+
+
+                    <p>
+                        Your rental information
+                    </p>
+
+
+                </div>
+
+
+                <div class="header-user">
+
+
+                    <div class="user-avatar">
+                        👤
+                    </div>
+
+
+                    <div class="header-user-info">
+
+
+                        <strong id="tenantUserName">
+                            Tenant
+                        </strong>
+
+
+                        <span>
+                            Tenant
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <main class="private-content">
+
+
+                <!-- TENANT DASHBOARD -->
+
+                <section
+                    id="tenantDashboard"
+                    class="private-section active"
+                >
+
+
+                    <div class="welcome-banner tenant-banner">
+
+
+                        <div>
+
+
+                            <span>
+                                TENANT PORTAL
+                            </span>
+
+
+                            <h1>
+                                Welcome 👋
+                            </h1>
+
+
+                            <p>
+
+                                Manage your rental information,
+                                payments and complaints.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="stats-grid">
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                🏠
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    My Property
+                                </span>
+
+
+                                <strong id="tenantPropertyName">
+                                    —
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                📅
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Rent Expires
+                                </span>
+
+
+                                <strong id="tenantRentEnd">
+                                    —
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                💰
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Rent Amount
+                                </span>
+
+
+                                <strong id="tenantRentAmount">
+                                    ₦0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+
+                            <div class="stat-icon">
+                                🔔
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Notifications
+                                </span>
+
+
+                                <strong id="tenantNotificationCount">
+                                    0
+                                </strong>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="dashboard-columns">
+
+
+                        <div class="dashboard-card">
+
+
+                            <div class="card-heading">
+
+
+                                <div>
+
+                                    <h3>
+                                        My Property
+                                    </h3>
+
+
+                                    <p>
+                                        Your current rental
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div id="tenantDashboardProperty">
+
+
+                                <div class="empty-small">
+                                    No active tenancy found.
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="dashboard-card">
+
+
+                            <div class="card-heading">
+
+
+                                <div>
+
+                                    <h3>
+                                        Recent Messages
+                                    </h3>
+
+
+                                    <p>
+                                        Announcements from landlord
+                                    </p>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div id="tenantDashboardMessages">
+
+
+                                <div class="empty-small">
+                                    No messages yet.
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TENANT PROPERTY -->
+
+                <section
+                    id="tenantProperty"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                My Property
+                            </h2>
+
+
+                            <p>
+                                Information about your rented property.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="tenantPropertyDetails">
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🏠
+                            </div>
+
+
+                            <h3>
+                                No active property
+                            </h3>
+
+
+                            <p>
+                                Your property information will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TENANT PAYMENTS -->
+
+                <section
+                    id="tenantPayments"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                My Payments
+                            </h2>
+
+
+                            <p>
+                                Your rent and other payment records.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="tenantPaymentList">
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                💰
+                            </div>
+
+
+                            <h3>
+                                No payment records
+                            </h3>
+
+
+                            <p>
+                                Your payments will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TENANT COMPLAINTS -->
+
+                <section
+                    id="tenantComplaints"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                My Complaints
+                            </h2>
+
+
+                            <p>
+                                Report maintenance problems or other issues.
+                            </p>
+
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            onclick="openTenantComplaintForm()"
+                        >
+                            + Lodge Complaint
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="tenantComplaintFormContainer"
+                        class="dashboard-card form-card hidden"
+                    >
+
+
+                        <div class="card-heading">
+
+
+                            <div>
+
+                                <h3>
+                                    Lodge a Complaint
+                                </h3>
+
+
+                                <p>
+                                    Tell your landlord about the issue.
+                                </p>
+
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="modal-close small"
+                                onclick="closeTenantComplaintForm()"
+                            >
+                                ×
+                            </button>
+
+
+                        </div>
+
+
+                        <form id="tenantComplaintForm">
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+
+                                    <label for="complaintTitle">
+                                        Title
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="complaintTitle"
+                                        placeholder="e.g. Leaking tap"
+                                        required
+                                    >
+
+
+                                </div>
+
+
+                                <div class="form-group">
+
+
+                                    <label for="complaintPriority">
+                                        Priority
+                                    </label>
+
+
+                                    <select id="complaintPriority">
+
+
+                                        <option value="normal">
+                                            Normal
+                                        </option>
+
+
+                                        <option value="low">
+                                            Low
+                                        </option>
+
+
+                                        <option value="high">
+                                            High
+                                        </option>
+
+
+                                        <option value="urgent">
+                                            Urgent
+                                        </option>
+
+
+                                    </select>
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="complaintDescription">
+                                        Description
+                                    </label>
+
+
+                                    <textarea
+                                        id="complaintDescription"
+                                        rows="6"
+                                        placeholder="Explain the problem..."
+                                        required
+                                    ></textarea>
+
+
+                                </div>
+
+
+                                <div class="form-group full">
+
+
+                                    <label for="complaintImage">
+                                        Attach Picture
+                                    </label>
+
+
+                                    <input
+                                        type="file"
+                                        id="complaintImage"
+                                        accept="image/jpeg,image/png,image/webp"
+                                    >
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+
+                                <button
+                                    type="button"
+                                    class="secondary-btn"
+                                    onclick="closeTenantComplaintForm()"
+                                >
+                                    Cancel
+                                </button>
+
+
+                                <button
+                                    type="submit"
+                                    class="primary-btn"
+                                >
+                                    Submit Complaint
+                                </button>
+
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div id="tenantComplaintList">
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                📝
+                            </div>
+
+
+                            <h3>
+                                No complaints
+                            </h3>
+
+
+                            <p>
+                                Your complaints will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TENANT MESSAGES -->
+
+                <section
+                    id="tenantMessages"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Messages
+                            </h2>
+
+
+                            <p>
+                                Important messages from your landlord.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="tenantMessageList">
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                📢
+                            </div>
+
+
+                            <h3>
+                                No messages
+                            </h3>
+
+
+                            <p>
+                                Messages from your landlord will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- TENANT NOTIFICATIONS -->
+
+                <section
+                    id="tenantNotifications"
+                    class="private-section"
+                >
+
+
+                    <div class="section-toolbar">
+
+
+                        <div>
+
+                            <h2>
+                                Notifications
+                            </h2>
+
+
+                            <p>
+                                Rent reminders and other alerts.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div id="tenantNotificationList">
+
+
+                        <div class="empty-state">
+
+
+                            <div class="empty-icon">
+                                🔔
+                            </div>
+
+
+                            <h3>
+                                No notifications
+                            </h3>
+
+
+                            <p>
+                                Your notifications will appear here.
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </main>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         PROPERTY DETAILS MODAL
+         ===================================================== -->
+
+    <div
+        id="propertyDetailsModal"
+        class="modal hidden"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="modal-overlay"
+            onclick="closePropertyDetails()"
+        ></div>
+
+
+        <div
+            class="modal-card property-details-modal"
+            role="dialog"
+            aria-modal="true"
+        >
+
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closePropertyDetails()"
+            >
+                ×
+            </button>
+
+
+            <div id="propertyDetailsContent"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script
+        type="module"
+        src="js/app.js"
+    ></script>
+
+
+</body>
+
+</html>
